@@ -1,0 +1,11 @@
+#Ubuntu Pod
+kind: Pod                              
+apiVersion: v1                     
+metadata:                           
+  name: testpod                  
+spec:                                    
+  containers:                      
+    - name: c00                 
+      image: ubuntu:16.04           
+      command: ["/bin/bash", "-c", "while true; do echo Hello-Anand; sleep 5 ; done"]
+  restartPolicy: Never        # Defaults to Always
